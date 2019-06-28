@@ -1,5 +1,8 @@
 package com.hibernate.beginner;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -7,8 +10,6 @@ import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
-
-import com.mysql.cj.jdbc.SuspendableXAConnection;
 
 public class HibernateApp {
 	
@@ -39,9 +40,9 @@ public class HibernateApp {
 		try {
 			transaction = session.beginTransaction();
 			Friend friend = new Friend();
-			friend.setName("Prafful");
-			friend.setLocation("Japan");
-			friend.setEmail("prraful@gmail.com");
+			friend.setName("Okie");
+			friend.setLocation("Tokyo");
+			friend.setEmail("okie@gmail.com");
 			Integer id = (Integer) session.save(friend);
 			System.out.println("Identifier Value: " +  id);
 			transaction.commit();
@@ -57,15 +58,74 @@ public class HibernateApp {
 			session.close();	
 		}
 		
+		//get list of friends from the database
+		session = sessionFactory.openSession();
+		transaction = null;
+		List<Friend> friends = new ArrayList<Friend>();
+		try {
+			transaction = session.beginTransaction();
+			friends =session.createQuery("from Friend").list();
+			transaction.commit();
+			
+		} catch (HibernateException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}finally {
+			session.close();
+			
+		}
+		
+		System.out.println("***************Get list of friends**************");
+		for (Friend f : friends) {
+			System.out.println("Id: " + f.getId());
+			System.out.println("Name: " + f.getName());
+			System.out.println("Location: " + f.getLocation());
+			System.out.println("---------------------------");
+		}
 		
 		
-	
+		//delete one friend
+		session = sessionFactory.openSession();
+		transaction = null;
+		
+		try {
+			Object friendObject = session.load(Friend.class, new Integer(5));
+			Friend f = (Friend) friendObject;
+			transaction = session.beginTransaction();
+			session.delete(f);
+			transaction.commit();
+			System.out.println("Friend with ID: " + f.getId() + " deleted!");
+		} catch (HibernateException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		} finally {
+			session.close();	
+		}
+		
+		//update friend
+		session = sessionFactory.openSession();
+		transaction = null;
+		
+		try {
+			Object friendObject = session.load(Friend.class, new Integer(9));
+			Friend f = (Friend) friendObject;
+			transaction = session.beginTransaction();
+			//update the values in friend instance with setters
+			f.setName("Pokemon");
+			f.setEmail("pokemon@gmail.com");
+			session.update(f);
+			transaction.commit();
+			System.out.println("Friend with ID: " + f.getId() + " updated!");
+		} catch (HibernateException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		} finally {
+			session.close();	
+		}
 		
 		
 		
-		
-		
-		
+				
 	}
 
 }
