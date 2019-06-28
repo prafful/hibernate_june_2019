@@ -33,8 +33,7 @@ public class HibernateApp {
 		sessionFactory = configuration.buildSessionFactory(serviceRegistry);
 		
 		HibernateApp app = new HibernateApp();
-		int primaryKey = app.insertFriend("Yuko", "Yokohama", "yuko@gmail.com");
-		System.out.println("Friend created: " + primaryKey);
+		app.insertFriend("Yuko", "Yokohama", "yuko@gmail.com");
 		
 		
 		//get list of friends from the database

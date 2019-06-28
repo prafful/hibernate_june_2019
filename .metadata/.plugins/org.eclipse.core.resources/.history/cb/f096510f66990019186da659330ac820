@@ -33,8 +33,6 @@ public class HibernateApp {
 		sessionFactory = configuration.buildSessionFactory(serviceRegistry);
 		
 		HibernateApp app = new HibernateApp();
-		int primaryKey = app.insertFriend("Yuko", "Yokohama", "yuko@gmail.com");
-		System.out.println("Friend created: " + primaryKey);
 		
 		
 		//get list of friends from the database
@@ -108,7 +106,7 @@ public class HibernateApp {
 	}
 	
 	
-	private int insertFriend(String name, String location, String email) {
+	private int insertFriend() {
 		
 		//insert implemetation
 		//the beginning and end of a logical transaction
@@ -119,9 +117,9 @@ public class HibernateApp {
 		try {
 			transaction = session.beginTransaction();
 			Friend friend = new Friend();
-			friend.setName(name);
-			friend.setLocation(location);
-			friend.setEmail(email);
+			friend.setName("Okie");
+			friend.setLocation("Tokyo");
+			friend.setEmail("okie@gmail.com");
 			id = (Integer) session.save(friend);
 			System.out.println("Identifier Value: " +  id);
 			transaction.commit();

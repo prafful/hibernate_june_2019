@@ -32,10 +32,31 @@ public class HibernateApp {
 		//use service registry to create session factory
 		sessionFactory = configuration.buildSessionFactory(serviceRegistry);
 		
-		HibernateApp app = new HibernateApp();
-		int primaryKey = app.insertFriend("Yuko", "Yokohama", "yuko@gmail.com");
-		System.out.println("Friend created: " + primaryKey);
+		//insert implemetation
+		//the beginning and end of a logical transaction
+		Session session = sessionFactory.openSession();
+		Transaction transaction = null;
 		
+		try {
+			transaction = session.beginTransaction();
+			Friend friend = new Friend();
+			friend.setName("Okie");
+			friend.setLocation("Tokyo");
+			friend.setEmail("okie@gmail.com");
+			Integer id = (Integer) session.save(friend);
+			System.out.println("Identifier Value: " +  id);
+			transaction.commit();
+			
+		} catch (HibernateException e) {
+			// TODO: handle exception
+			if(transaction != null) {
+				System.out.println("**********Rolling Back*************");
+				transaction.rollback();
+				e.printStackTrace();
+			}
+		} finally {
+			session.close();	
+		}
 		
 		//get list of friends from the database
 		session = sessionFactory.openSession();
@@ -105,38 +126,6 @@ public class HibernateApp {
 		
 		
 				
-	}
-	
-	
-	private int insertFriend(String name, String location, String email) {
-		
-		//insert implemetation
-		//the beginning and end of a logical transaction
-		Session session = sessionFactory.openSession();
-		Transaction transaction = null;
-		Integer id = null;
-		
-		try {
-			transaction = session.beginTransaction();
-			Friend friend = new Friend();
-			friend.setName(name);
-			friend.setLocation(location);
-			friend.setEmail(email);
-			id = (Integer) session.save(friend);
-			System.out.println("Identifier Value: " +  id);
-			transaction.commit();
-			
-		} catch (HibernateException e) {
-			// TODO: handle exception
-			if(transaction != null) {
-				System.out.println("**********Rolling Back*************");
-				transaction.rollback();
-				e.printStackTrace();
-			}
-		} finally {
-			session.close();	
-		}
-		return id;
 	}
 
 }
