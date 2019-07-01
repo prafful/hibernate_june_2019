@@ -32,7 +32,7 @@ public class HibernateApp {
 		sessionFactory = configuration.buildSessionFactory(serviceRegistry);
 		
 		HibernateApp app = new HibernateApp();
-		int primaryKey = app.insertFriend("Shiva", "Kailash", "shiva@gmail.com");
+		int primaryKey = app.insertFriend("PD", "Chennai", "pd@gmail.com");
 		System.out.println("Friend created: " + primaryKey);
 		
 		

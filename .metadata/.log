@@ -8014,3 +8014,207 @@ Caused by: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2019-07-01 12:33:15.663
 !MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:09.476
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.PxxCxRul
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:09.487
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.PxxCxRul
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:09.494
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:09.503
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.PxxCxRul => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.151
+!MESSAGE Boot LS startup time from start to initialized: 6798ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.213
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.uCcxLuwL
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.220
+!MESSAGE subscribing to classpath changes: sts4.classpath.uCcxLuwL
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.227
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.231
+!MESSAGE subsribers = [sts4.classpath.uCcxLuwL]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.239
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.247
+!MESSAGE project 002HibernateAnnotation ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.269
+!MESSAGE Preparing classpath changed notification 002HibernateAnnotation
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.277
+!MESSAGE project 001HibernateBeginner_xml ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.283
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.289
+!MESSAGE project 003_Inheritance_Mapping_MappedSuperClass ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.295
+!MESSAGE classpath=45 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.303
+!MESSAGE project 004_Inheritance_Mapping_Single_Table ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.315
+!MESSAGE executing callback sts4.classpath.uCcxLuwL 002HibernateAnnotation false 45
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.333
+!MESSAGE project 005_Inheritance_Joined_Table ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.380
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.395
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.uCcxLuwL => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.428
+!MESSAGE executing callback sts4.classpath.uCcxLuwL SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.437
+!MESSAGE Preparing classpath changed notification 005_Inheritance_Joined_Table
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.445
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.452
+!MESSAGE classpath=45 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.471
+!MESSAGE executing callback sts4.classpath.uCcxLuwL 005_Inheritance_Joined_Table false 45
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.510
+!MESSAGE executing callback sts4.classpath.uCcxLuwL SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.551
+!MESSAGE Preparing classpath changed notification 004_Inheritance_Mapping_Single_Table
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.565
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.584
+!MESSAGE classpath=45 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.598
+!MESSAGE executing callback sts4.classpath.uCcxLuwL 004_Inheritance_Mapping_Single_Table false 45
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.613
+!MESSAGE executing callback sts4.classpath.uCcxLuwL SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.624
+!MESSAGE Preparing classpath changed notification 003_Inheritance_Mapping_MappedSuperClass
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.633
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.641
+!MESSAGE classpath=45 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.651
+!MESSAGE executing callback sts4.classpath.uCcxLuwL 003_Inheritance_Mapping_MappedSuperClass false 45
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.663
+!MESSAGE executing callback sts4.classpath.uCcxLuwL SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.671
+!MESSAGE Preparing classpath changed notification 001HibernateBeginner_xml
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.676
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.682
+!MESSAGE classpath=44 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.688
+!MESSAGE executing callback sts4.classpath.uCcxLuwL 001HibernateBeginner_xml false 44
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-01 12:40:18.704
+!MESSAGE executing callback sts4.classpath.uCcxLuwL SUCCESS [done]
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-07-01 12:40:42.867
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-07-01 12:40:42.976
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-07-01 12:40:54.756
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-07-01 12:40:54.774
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-07-01 12:42:44.852
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-07-01 12:42:44.878
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-07-01 12:43:08.865
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-07-01 12:43:08.884
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-07-01 12:45:47.838
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-07-01 12:45:47.857
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-07-01 12:47:57.639
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-07-01 12:47:57.667
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-07-01 12:48:28.469
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-07-01 12:48:28.508
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-07-01 12:52:09.830
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-07-01 12:52:09.848
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-07-01 12:52:16.600
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-07-01 12:52:16.629
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-07-01 12:52:35.599
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-07-01 12:52:35.646
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-07-01 12:52:42.004
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-07-01 12:52:42.030
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-07-01 12:54:18.556
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-07-01 12:54:18.598
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-07-01 12:54:37.551
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-07-01 12:54:37.578
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
