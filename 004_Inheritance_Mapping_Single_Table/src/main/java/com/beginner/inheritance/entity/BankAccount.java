@@ -1,6 +1,7 @@
 package com.beginner.inheritance.entity;
 
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,6 +18,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity (name = "Bank_Account_Single_Table")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE )
+@DiscriminatorColumn(name = "account_type")
 public class BankAccount {
 	
 	@Id

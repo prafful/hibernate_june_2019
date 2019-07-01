@@ -32,7 +32,7 @@ public class HibernateApp {
 		properties.put(Environment.USER, "root");
 		properties.put(Environment.PASS, "root1");
 		properties.put(Environment.DIALECT, "org.hibernate.dialect.MySQL5Dialect");
-		properties.put(Environment.HBM2DDL_AUTO, "update");
+		properties.put(Environment.HBM2DDL_AUTO, "create");
 		properties.put(Environment.SHOW_SQL, true);
 		
 		
