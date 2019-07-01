@@ -32,7 +32,7 @@ public class HibernateApp {
 		
 		
 		  CreditAccount creditAccount = new CreditAccount();
-		  creditAccount.setAcccountHolder("Prafful");
+		  creditAccount.setAcccountHolder("PD");
 		  creditAccount.setBalance(8888.8888); creditAccount.setInterestRate(8.8);
 		  creditAccount.setCreditLimit(88888888.8);
 		 

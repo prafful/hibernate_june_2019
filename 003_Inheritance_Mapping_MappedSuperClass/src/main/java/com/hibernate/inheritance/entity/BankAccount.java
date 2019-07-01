@@ -24,5 +24,5 @@ public class BankAccount {
 	private String acccountHolder;
 	private Double balance;
 	private Double interestRate;
-
+ 
 }
