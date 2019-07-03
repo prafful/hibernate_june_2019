@@ -7,6 +7,8 @@ import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Order;
+import org.hibernate.criterion.Projection;
+import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
 
 import com.hibernate.beginner.entity.Friend;
@@ -62,6 +64,22 @@ public class HibernateApp {
 			for(Friend f1: friends) {
 				System.out.println("Id: " + f1.getId() + " Name: " + f1.getName() + " from " + f1.getLocation());
 			}
+			
+			//like query
+			criteria = session.createCriteria(Friend.class);
+			criteria.add(Restrictions.like("name", "%oy%"));
+			friends = criteria.list();
+			for(Friend f2: friends) {
+				System.out.println("Id: " + f2.getId() + " Name: " + f2.getName() + " from " + f2.getLocation());
+			}
+			
+			//projections - can be used for single column query OR Query which we want to run on single column!! or for aggregate functions (min, max)!
+			criteria = session.createCriteria(Friend.class);
+			criteria.setProjection(Projections.rowCount());
+			criteria.add(Restrictions.like("name","%a%"));
+			Long count = (Long) criteria.uniqueResult();
+			System.out.println("Count of rows: " + count);
+			
 			
 			
 			
