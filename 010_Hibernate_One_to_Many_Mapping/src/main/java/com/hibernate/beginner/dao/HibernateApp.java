@@ -20,15 +20,15 @@ public class HibernateApp {
 			session = HibernateUtility.retrieveSessionFactory().openSession();
 		
 			Address address1 = new Address();
-			address1.setStreet("Street 1");
-			address1.setCity("City 1");
+			address1.setStreet("Street 2");
+			address1.setCity("City 2");
 			
 			Address address11 = new Address();
-			address11.setStreet("Street 11");
-			address11.setCity("City 11");
+			address11.setStreet("Street 3");
+			address11.setCity("City 3");
 			
 			User user = new User();
-			user.setUsername("username1");
+			user.setUsername("username2");
 			user.getAddress().add(address1);
 			user.getAddress().add(address11);
 			
