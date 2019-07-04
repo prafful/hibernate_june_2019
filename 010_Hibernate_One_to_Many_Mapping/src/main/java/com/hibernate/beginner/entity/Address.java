@@ -25,4 +25,7 @@ public class Address {
 	@Column (name = "add_city")
 	private String city;
 	
+	
+	
+	
 }
