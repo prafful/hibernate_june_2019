@@ -10,6 +10,7 @@ import org.hibernate.cfg.Environment;
 import org.hibernate.service.ServiceRegistry;
 
 import com.hibernate.beginner.entity.Friend;
+import com.hibernate.beginner.entity.InsertFriendTemp;
 
 public class HibernateUtility {
 	
@@ -32,6 +33,7 @@ public class HibernateUtility {
 				properties.put(Environment.DIALECT, "org.hibernate.dialect.MySQL5Dialect");
 				properties.put(Environment.HBM2DDL_AUTO, "update");
 				properties.put(Environment.SHOW_SQL, true);
+				properties.put(Environment.FORMAT_SQL, true);
 				
 				
 				//use properties to set configuration
@@ -39,6 +41,7 @@ public class HibernateUtility {
 				
 				// add an entity to configuration 
 				configuration.addAnnotatedClass(Friend.class);
+			configuration.addAnnotatedClass(InsertFriendTemp.class);
 				
 				//use configuration (populated with all properties and entities) to create serrviceRegistry
 				

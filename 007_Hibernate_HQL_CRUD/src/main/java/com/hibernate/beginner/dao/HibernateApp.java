@@ -8,6 +8,7 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import com.hibernate.beginner.entity.Friend;
+import com.hibernate.beginner.entity.InsertFriendTemp;
 import com.hibernate.beginner.utility.HibernateUtility;
 
 
@@ -19,27 +20,41 @@ public class HibernateApp {
 		Session session = null;
 		try {
 			session = HibernateUtility.retrieveSessionFactory().openSession();
-			//transaction = session.beginTransaction();
+		
+			
+			//delete all rows from temp_friend (mapped by InsertFriendTemp) before the actual insert in friend table happens!
+			transaction = session.beginTransaction();
+			String hql = "delete from InsertFriendTemp";
+			Query query = session.createQuery(hql);
+			int i = query.executeUpdate();
+			System.out.println("Count of rows deleted from temp friend table: " + i);
+			transaction.commit();
 			
 			//insert query
-			Friend f = new Friend();
-			f.setName("Okie");
-			f.setLocation("Omo");
-			//String hql = "insert into Friend (name, location) select name, location from Friend";
-			//Query query = session.createQuery(hql);
+			InsertFriendTemp f_temp = new InsertFriendTemp();
+			f_temp.setName("OBB");
+			f_temp.setLocation("Chennai");
 			
 			transaction = session.beginTransaction();
-			session.save(f);
+			//insert into temp_table before inserting in friend table!
+			session.save(f_temp);
 			//int i = query.executeUpdate();
 			transaction.commit();
-			//System.out.println("No of rows updated: " + i);
 			
+			
+			//get values from temp_table and then insert into friend table
+			transaction=session.beginTransaction();
+			hql = "insert into Friend (name, location) select name, location from InsertFriendTemp";
+			query = session.createQuery(hql);
+			i = query.executeUpdate();
+			System.out.println("Insert into friend using HQL : rows updated: " + i);
+			transaction.commit();
 			
 			//retrieve friend with some id!
 			transaction = null;
 			transaction = session.beginTransaction();
-			String hql = "from Friend F where F.id = :friendId";
-			Query query = session.createQuery(hql);
+			hql = "from Friend F where F.id = :friendId";
+			query = session.createQuery(hql);
 			query.setParameter("friendId", 3L);
 			List results  = query.getResultList();
 			
@@ -56,7 +71,7 @@ public class HibernateApp {
 			transaction = session.beginTransaction();
 		    hql = "delete from Friend F where F.id = :friendId";
 			query = session.createQuery(hql);
-			query.setParameter("friendId", 6L);
+			query.setParameter("friendId", 10L);
 			int deletedRowCount = query.executeUpdate();
 			System.out.println("Number of rows deleted: " + deletedRowCount);
 			transaction.commit();
